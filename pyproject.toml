@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vx-underground-extractor"
+authors = [
+    {name="サイバーカイダ (cyberkaida)"},
+]
+version = "0.1.0"
+description = "A system to extract malware samples from vx-underground"
+readme = "README.md"
+keywords = ["vx-underground", "malware", "extractor"]
+dependencies = [
+    "luigi",
+    "cart",
+    "py7zr >= 0.21.1",
+    "rich",
+]
+
+[project.scripts]
+vx-underground-extractor = "vx_underground_extractor:main"
